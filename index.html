@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="bn" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <!-- Primary SEO Meta Tags -->
+  <title data-i18n="siteTitle">যাকাত ক্যালকুলেটর | ইসলামিক সম্পদ ও যাকাত গণক</title>
+  <meta name="description" content="সহজ, আধুনিক, নির্ভরযোগ্য ও ১০০% গোপনীয় অনলাইন যাকাত ক্যালকুলেটর। স্বর্ণ ও রূপার নিসাব, ব্যাংক ব্যালেন্স, ব্যবসা ও বিনিয়োগের যাকাত হিসাব করুন ব্রাউজারে।">
+  <meta name="keywords" content="Zakat Calculator, যাকাত ক্যালকুলেটর, Zakat Calculator Bangladesh, Nisab 2026, Gold Silver Nisab, Islamic Wealth Calculator, Zakat BDT, যাকাত হিসাব">
+  <meta name="author" content="Zakat Calculator BD">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://zakat-calculator-bd.vercel.app/">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://zakat-calculator-bd.vercel.app/">
+  <meta property="og:title" content="যাকাত ক্যালকুলেটর - নির্ভুল ও ১০০% গোপনীয় যাকাত গণক">
+  <meta property="og:description" content="স্বর্ণ ও রূপার নিসাব, নগদ অর্থ, ব্যাংক ও ব্যবসায়ী সম্পদের যাকাত নির্ভুলভাবে হিসাব করুন। কোনো ডেটা সার্ভারে পাঠানো হয় না।">
+  <meta property="og:image" content="https://zakat-calculator-bd.vercel.app/favicon.svg">
+  <meta property="og:locale" content="bn_BD">
+  <meta property="og:site_name" content="Zakat Calculator BD">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://zakat-calculator-bd.vercel.app/">
+  <meta name="twitter:title" content="যাকাত ক্যালকুলেটর | Zakat Calculator BD">
+  <meta name="twitter:description" content="সহজ, আধুনিক ও সম্পূর্ণ প্রাইভেট ইসলামিক যাকাত ক্যালকুলেটর।">
+  <meta name="twitter:image" content="https://zakat-calculator-bd.vercel.app/favicon.svg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+  <!-- Google Fonts: Hind Siliguri & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- JSON-LD Structured Data: FAQPage & WebApplication -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        "name": "Zakat Calculator Bangladesh",
+        "url": "https://zakat-calculator-bd.vercel.app/",
+        "applicationCategory": "FinanceApplication",
+        "operatingSystem": "All modern browsers",
+        "description": "A privacy-first, fully client-side Islamic Zakat calculator supporting Gold and Silver Nisab with BDT currency.",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "BDT"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "স্বর্ণ ও রৌপ্য নিসাবের মধ্যে কোনটি নির্বাচন করব?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "আপনার কাছে যদি শুধুমাত্র খাঁটি স্বর্ণ থাকে এবং কোনো নগদ টাকা বা ব্যবসায়িক পণ্য না থাকে, তবে স্বর্ণের নিসাব ধরা যায়। কিন্তু যদি নগদ টাকা, স্বর্ণ, রূপা বা ব্যবসায়িক পণ্য মিলিয়ে মিশ্র সম্পদ থাকে, তবে হানাফী ফিকহ সহ সংখ্যাগরিষ্ঠ আলেমদের মতে রূপার নিসাবকে ভিত্তি ধরা উত্তম, কারণ এতে গরীবের হক সর্বাধিক সংরক্ষিত হয়।"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "ব্যবহৃত স্বর্ণালংকারের উপর কি যাকাত দিতে হবে?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "হানাফী মাযহাব অনুযায়ী মহিলাদের ব্যবহৃত স্বর্ণ ও রৌপ্যের অলংকার নিসাব পরিমাণ হলে এবং এক বছর পূর্ণ হলে তার উপরও যাকাত দেওয়া আবশ্যক।"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "দীর্ঘমেয়াদী ঋণের কিস্তি কীভাবে হিসাব করব?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "বাড়ি নির্মাণ বা দীর্ঘমেয়াদী ঋণের ক্ষেত্রে পুরো ঋণ একসাথে বিয়োগ করা যাবে না। শুধুমাত্র চলতি এক বছরের মধ্যে যেসব কিস্তি প্রদেয় হবে, সেই পরিমাণ অংশ যাকাত হিসাবের সময় মোট সম্পদ থেকে বাদ দেওয়া যাবে।"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "ভবিষ্যৎ প্রয়োজনের জন্য জমানো টাকার যাকাত দিতে হবে?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "হ্যাঁ। টাকা ভবিষ্যতে যে মহৎ কাজের জন্যই জমানো হোক না কেন, তা যদি নিসাব পরিমাণ থাকে এবং এক চান্দ্র বছর পার হয়, তবে তার উপর ২.৫% যাকাত দেওয়া ফরজ।"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "যাকাত কখন এবং কীভাবে প্রদান করতে হয়?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "সম্পদ নিসাবে পৌঁছার পর প্রতি চান্দ্র বছর পূর্ণ হওয়ার তারিখে যাকাত হিসাব করে তাৎক্ষণিকভাবে হকদারদের মাঝে বিতরণ করা উচিত।"
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Accessible Skip Link -->
+  <a href="#main-content" class="skip-link">সরাসরি মূল অংশে যান / Skip to content</a>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="#" class="brand" aria-label="Zakat Calculator Home">
+          <svg class="brand-icon" viewBox="0 0 64 64" width="42" height="42" aria-hidden="true">
+            <circle cx="32" cy="32" r="30" fill="#047857"/>
+            <path d="M 34 11 A 19 19 0 0 0 16 33 A 19 19 0 0 0 35 52 A 19 19 0 0 1 23 45 A 19 19 0 0 1 20 31 A 19 19 0 0 1 34 11 Z" fill="#fbbf24" opacity="0.4"/>
+            <line x1="32" y1="18" x2="32" y2="46" stroke="#fbbf24" stroke-width="3" stroke-linecap="round"/>
+            <circle cx="32" cy="18" r="3" fill="#fbbf24"/>
+            <path d="M 24 46 L 40 46" stroke="#fbbf24" stroke-width="3" stroke-linecap="round"/>
+            <line x1="16" y1="24" x2="48" y2="24" stroke="#fbbf24" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="16" y1="24" x2="11" y2="35" stroke="#fbbf24" stroke-width="1.5"/>
+            <line x1="16" y1="24" x2="21" y2="35" stroke="#fbbf24" stroke-width="1.5"/>
+            <path d="M 9 35 Q 16 41 23 35 Z" fill="#fbbf24"/>
+            <line x1="48" y1="24" x2="43" y2="35" stroke="#fbbf24" stroke-width="1.5"/>
+            <line x1="48" y1="24" x2="53" y2="35" stroke="#fbbf24" stroke-width="1.5"/>
+            <path d="M 41 35 Q 48 41 55 35 Z" fill="#fbbf24"/>
+          </svg>
+          <div>
+            <h1 class="brand-title">যাকাত ক্যালকুলেটর</h1>
+            <span class="brand-subtitle" data-i18n="siteSubtitle">সহজ, নির্ভুল ও ১০০% গোপনীয় যাকাত ক্যালকুলেটর</span>
+          </div>
+        </a>
+
+        <div class="header-controls">
+          <button type="button" class="btn-toggle" id="langToggle" aria-label="Toggle Language">
+            🌐 English
+          </button>
+          <button type="button" class="btn-toggle" id="themeToggle" aria-label="Toggle Theme">
+            🌙
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Privacy First Banner -->
+  <aside class="privacy-banner" role="complementary">
+    <div class="container">
+      <div class="privacy-banner-inner">
+        <span class="privacy-icon">🔒</span>
+        <span data-i18n="privacyBanner">১০০% গোপনীয় ও সুরক্ষিত: আপনার কোনো তথ্য ইন্টারনেটে বা সার্ভারে পাঠানো হয় না। সমস্ত হিসাব শুধুমাত্র আপনার ব্রাউজারেই সম্পন্ন হয়।</span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Print Header (Hidden on screen, shown in print) -->
+  <div class="print-header container">
+    <h1>যাকাত হিসাব বিবরণী (Zakat Calculation Statement)</h1>
+    <p>তারিখ: <span id="printDate"></span> | মুদ্রা: BDT (৳) | গোপনীয় ব্যক্তিগত কপি</p>
+  </div>
+
+  <!-- Main Container -->
+  <main id="main-content" class="container" role="main">
+
+    <!-- Step Progress Navigator -->
+    <nav class="step-nav-wrapper" aria-label="Calculation Steps">
+      <div class="step-nav">
+        <a href="#step1Card" class="step-item active">
+          <span class="step-num">১</span>
+          <span data-i18n="step1Nav">১. নিসাব</span>
+        </a>
+        <a href="#step2Card" class="step-item">
+          <span class="step-num">২</span>
+          <span data-i18n="step2Nav">২. সম্পদ</span>
+        </a>
+        <a href="#step3Card" class="step-item">
+          <span class="step-num">৩</span>
+          <span data-i18n="step3Nav">৩. দায় ও ঋণ</span>
+        </a>
+        <a href="#step4Card" class="step-item">
+          <span class="step-num">৪</span>
+          <span data-i18n="step4Nav">৪. ফলাফল</span>
+        </a>
+      </div>
+    </nav>
+
+    <!-- Quick Sample Presets Bar -->
+    <section class="preset-bar" aria-label="Quick Test Samples">
+      <span class="preset-title" data-i18n="presetTitle">নমুনা পরীক্ষা:</span>
+      <button type="button" class="btn-preset" data-preset="1" data-i18n="sample1Btn">স্যাম্পল ১ (রৌপ্য নিসাব)</button>
+      <button type="button" class="btn-preset" data-preset="2" data-i18n="sample2Btn">স্যাম্পল ২ (যাকাত ফরজ)</button>
+      <button type="button" class="btn-preset" data-preset="3" data-i18n="sample3Btn">স্যাম্পল ৩ (নিসাবের নিচে)</button>
+      <button type="button" class="btn-preset" data-preset="4" data-i18n="sample4Btn">স্যাম্পল ৪ (১০ তোলা ২২ ক্যারেট)</button>
+    </section>
+
+    <!-- ====================================================================
+         STEP 1: NISAB SETTINGS CARD
+         ==================================================================== -->
+    <section id="step1Card" class="card" aria-labelledby="step1Heading">
+      <header class="card-header">
+        <div class="card-header-left">
+          <span class="card-step-badge" data-i18n="step1Badge">ধাপ ১</span>
+          <div>
+            <h2 id="step1Heading" class="card-title" data-i18n="step1Title">নিসাব নির্ধারণ ও ধাতুর মূল্য</h2>
+            <p class="card-subtitle" data-i18n="step1Subtitle">স্বর্ণ ও রৌপ্যের বর্তমান বাজারদর ও নিসাব পরিমাপের একক নির্বাচন করুন</p>
+          </div>
+        </div>
+      </header>
+
+      <div class="card-body">
+        <div class="form-grid">
+          <!-- Unit Selector -->
+          <div class="form-group">
+            <label for="nisabUnitSelect" class="form-label" data-i18n="unitLabel">পরিমাপের একক:</label>
+            <select id="nisabUnitSelect" class="form-control">
+              <option value="gram" data-i18n="unitGram">গ্রাম (Gram)</option>
+              <option value="tola" data-i18n="unitTola">তোলা / ভরি (Tola - ১১.৬৬৪ গ্রাম)</option>
+            </select>
+          </div>
+
+          <!-- Gold Price Input -->
+          <div class="form-group">
+            <label for="goldPriceInput" class="form-label">
+              <span data-i18n="goldPriceLabel">স্বর্ণের বর্তমান মূল্য (প্রতি একক):</span>
+              <span class="form-label-hint">(<span class="nisab-unit-display">গ্রাম</span>)</span>
+            </label>
+            <div class="input-group">
+              <span class="input-prefix">৳</span>
+              <input type="number" id="goldPriceInput" min="0" step="any" class="form-control" placeholder="11500" value="11500" aria-describedby="goldPriceInputError">
+            </div>
+            <div id="goldPriceInputError" class="field-error-msg"></div>
+          </div>
+
+          <!-- Silver Price Input -->
+          <div class="form-group">
+            <label for="silverPriceInput" class="form-label">
+              <span data-i18n="silverPriceLabel">রৌপ্যের বর্তমান মূল্য (প্রতি একক):</span>
+              <span class="form-label-hint">(<span class="nisab-unit-display">গ্রাম</span>)</span>
+            </label>
+            <div class="input-group">
+              <span class="input-prefix">৳</span>
+              <input type="number" id="silverPriceInput" min="0" step="any" class="form-control" placeholder="100" value="100" aria-describedby="silverPriceInputError">
+            </div>
+            <div id="silverPriceInputError" class="field-error-msg"></div>
+          </div>
+        </div>
+
+        <div class="form-grid-2" style="margin-top: 1.25rem;">
+          <!-- Gold Nisab Weight (editable default) -->
+          <div class="form-group">
+            <label for="goldNisabWeightInput" class="form-label">
+              <span data-i18n="goldWeightLabel">স্বর্ণের নিসাব পরিমাণ:</span>
+              <span class="form-label-hint">(ডিফল্ট: ৮৭.৪৮ গ্রাম / ৭.৫ তোলা)</span>
+            </label>
+            <div class="input-group">
+              <input type="number" id="goldNisabWeightInput" min="0" step="any" class="form-control" value="87.48" aria-describedby="goldNisabWeightInputError">
+              <span class="input-suffix nisab-unit-display">গ্রাম</span>
+            </div>
+            <div id="goldNisabWeightInputError" class="field-error-msg"></div>
+          </div>
+
+          <!-- Silver Nisab Weight (editable default) -->
+          <div class="form-group">
+            <label for="silverNisabWeightInput" class="form-label">
+              <span data-i18n="silverWeightLabel">রৌপ্যের নিসাব পরিমাণ:</span>
+              <span class="form-label-hint">(ডিফল্ট: ৬১২.৩৬ গ্রাম / ৫২.৫ তোলা)</span>
+            </label>
+            <div class="input-group">
+              <input type="number" id="silverNisabWeightInput" min="0" step="any" class="form-control" value="612.36" aria-describedby="silverNisabWeightInputError">
+              <span class="input-suffix nisab-unit-display">গ্রাম</span>
+            </div>
+            <div id="silverNisabWeightInputError" class="field-error-msg"></div>
+          </div>
+        </div>
+
+        <!-- Nisab Basis Selector -->
+        <div style="margin-top: 1.5rem;">
+          <label class="form-label" data-i18n="basisLabel">নিসাব গণনার ভিত্তি নির্ধারণ:</label>
+          <div class="nisab-selector-group" role="radiogroup" aria-label="Nisab Basis Selection">
+            <!-- Silver (Default) -->
+            <div class="nisab-choice-card selected" id="nisabChoiceSilver">
+              <input type="radio" id="nisabBasisSilver" name="nisabBasis" value="silver" checked>
+              <div class="nisab-choice-title">
+                <span data-i18n="basisSilver">রৌপ্য নিসাব (সুপারিশকৃত)</span>
+                <span class="nisab-choice-badge">Default</span>
+              </div>
+              <p class="nisab-choice-desc" data-i18n="basisSilverDesc">অধিকাংশ আলেমদের মতে নগদ টাকা ও মিশ্র সম্পদের ক্ষেত্রে রৌপ্যের নিসাব উত্তম, যাতে দরিদ্ররা সর্বাধিক উপকৃত হন।</p>
+            </div>
+
+            <!-- Gold -->
+            <div class="nisab-choice-card" id="nisabChoiceGold">
+              <input type="radio" id="nisabBasisGold" name="nisabBasis" value="gold">
+              <div class="nisab-choice-title">
+                <span data-i18n="basisGold">স্বর্ণ নিসাব</span>
+              </div>
+              <p class="nisab-choice-desc" data-i18n="basisGoldDesc">শুধুমাত্র স্বর্ণ থাকলে বা বিশেষ মাসয়ালা অনুযায়ী স্বর্ণের নিসাব প্রযোজ্য হয়।</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Live Nisab Value Banner -->
+        <div class="nisab-result-banner">
+          <div>
+            <div class="nisab-result-label" data-i18n="nisabResultLabel">আপনার নির্ধারিত নিসাবের মূল্যমান:</div>
+            <small style="color: var(--text-muted);">এই মূল্যের সমান বা বেশি সম্পদ থাকলে যাকাত প্রযোজ্য হবে</small>
+          </div>
+          <div class="nisab-result-amount" id="nisabCalculatedAmount">৳ ৬১,২৩৬</div>
+        </div>
+
+        <!-- Scholarly Note -->
+        <div class="note-box">
+          <span>💡</span>
+          <span data-i18n="nisabScholarNote">পরামর্শ: নিসাব নির্ধারণে ইসলামী ফকীহগণের মধ্যে দ্বিমত রয়েছে। নগদ টাকা ও মিশ্র সম্পদের ক্ষেত্রে রূপার নিসাব অনুসরণ করাই অধিক সতর্কতা ও দরিদ্রবান্ধব। ব্যক্তিগত সুনির্দিষ্ট পরিস্থিতিতে বিজ্ঞ আলেমের পরামর্শ নিন।</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         STEP 2: ASSETS CARD
+         ==================================================================== -->
+    <section id="step2Card" class="card" aria-labelledby="step2Heading">
+      <header class="card-header">
+        <div class="card-header-left">
+          <span class="card-step-badge" data-i18n="step2Badge">ধাপ ২</span>
+          <div>
+            <h2 id="step2Heading" class="card-title" data-i18n="step2Title">যাকাতযোগ্য সম্পদসমূহ</h2>
+            <p class="card-subtitle" data-i18n="step2Subtitle">যেসব সম্পদ আপনার মালিকানায় এক বছর ধরে রয়েছে তার পরিমাণ লিখুন (ঐচ্ছিক)</p>
+          </div>
+        </div>
+        <div class="subtotal-badge">
+          <span data-i18n="totalAssetsLabel">মোট সম্পদ:</span>
+          <span id="totalAssetsBadge">৳ ০</span>
+        </div>
+      </header>
+
+      <div class="card-body">
+        <!-- Cash & Bank -->
+        <div class="form-grid-2">
+          <!-- Cash in Hand -->
+          <div class="form-group">
+            <label for="cashInput" class="form-label" data-i18n="cashLabel">হাতে থাকা নগদ টাকা:</label>
+            <div class="input-group">
+              <span class="input-prefix">৳</span>
+              <input type="number" id="cashInput" min="0" step="any" class="form-control" placeholder="0" aria-describedby="cashInputError">
+            </div>
+            <div id="cashInputError" class="field-error-msg"></div>
+          </div>
+
+          <!-- Bank & MFS -->
+          <div class="form-group">
+            <label for="bankInput" class="form-label" data-i18n="bankLabel">ব্যাংক ব্যালেন্স ও মোবাইল ব্যাংকিং (বিকাশ, নগদ ইত্যাদি):</label>
+            <div class="input-group">
+              <span class="input-prefix">৳</span>
+              <input type="number" id="bankInput" min="0" step="any" class="form-control" placeholder="0" aria-describedby="bankInputError">
+            </div>
+            <div id="bankInputError" class="field-error-msg"></div>
+          </div>
+        </div>
+
+        <!-- Gold Sub-card -->
+        <div class="sub-card" style="margin-top: 1.25rem;">
+          <div class="sub-card-title">
+            <span data-i18n="goldAssetTitle">স্বর্ণালংকার ও স্বর্ণ সম্পদ:</span>
+            <span class="sub-card-calc-badge" id="goldCalculatedValueBadge">হিসাবকৃত স্বর্ণমূল্য: ৳ ০</span>
+          </div>
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="goldWeightInput" class="form-label" data-i18n="goldWeightInputLabel">স্বর্ণের মোট ওজন:</label>
+              <input type="number" id="goldWeightInput" min="0" step="any" class="form-control" placeholder="0" aria-describedby="goldWeightInputError">
+              <div id="goldWeightInputError" class="field-error-msg"></div>
+            </div>
+            <div class="form-group">
+              <label for="goldUnitSelect" class="form-label" data-i18n="goldUnitLabel">একক:</label>
+              <select id="goldUnitSelect" class="form-control">
+                <option value="tola" selected>তোলা / ভরি (Tola)</option>
+                <option value="gram">গ্রাম (Gram)</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="goldPuritySelect" class="form-label" data-i18n="goldPurityLabel">স্বর্ণের ক্যারেট (বিশুদ্ধতা):</label>
+              <select id="goldPuritySelect" class="form-control">
+                <option value="24k">24 Karat (১০০% খাঁটি)</option>
+                <option value="22k" selected>22 Karat (৯১.৬৭% খাঁটি - মানসম্মত)</option>
+                <option value="21k">21 Karat (৮৭.৫% খাঁটি)</option>
+                <option value="18k">18 Karat (৭৫.০% খাঁটি)</option>
+              </select>
+            </div>
+          </div>
+          <small class="form-helper" style="margin-top: 0.5rem; display: block;">* খাঁটি সোনার আনুপাতিক হিসাব অনুযায়ী স্বর্ণের মূল্য স্বয়ংক্রিয়ভাবে ধার্য করা হয় (যেমন: ২২k এর ক্ষেত্রে ২২/২৪ অনুপাত)।</small>
+        </div>
+
+        <!-- Silver Sub-card -->
+        <div class="sub-card">
+          <div class="sub-card-title">
+            <span data-i18n="silverAssetTitle">রৌপ্যালংকার ও রূপা সম্পদ:</span>
+            <span class="sub-card-calc-badge" id="silverCalculatedValueBadge">হিসাবকৃত রূপামূল্য: ৳ ০</span>
+          </div>
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label for="silverWeightInput" class="form-label" data-i18n="silverWeightInputLabel">রূপার মোট ওজন:</label>
+              <input type="number" id="silverWeightInput" min="0" step="any" class="form-control" placeholder="0" aria-describedby="silverWeightInputError">
+              <div id="silverWeightInputError" class="field-error-msg"></div>
+            </div>
+            <div class="form-group">
+              <label for="silverUnitSelect" class="form-label" data-i18n="silverUnitLabel">একক:</label>
+              <select id="silverUnitSelect" class="form-control">
+                <option value="tola" selected>তোলা / ভরি (Tola)</option>
+                <option value="gram">গ্রাম (Gram)</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- Business, Trade, Investments -->
+        <div class="form-grid-2">
+          <!-- Business inventory -->
+          <div class="form-group">
+            <label for="businessInput" class="form-label" data-i18n="businessLabel">ব্যবসায়িক পণ্যের বর্তমান বাজারমূল্য:</label>
+            <div class="input-group">
+              <span class="input-prefix">৳</span>
+              <input type="number" id="businessInput" min="0" step="any" class="form-control" placeholder="0" aria-describedby="businessInputError">
+            </div>
+            <div id="businessInputError" class="field-error-msg"></div>
+          </div>
+
+          <!-- Receivables -->
+          <div class="form-group">
+            <label for="receivablesInput" class="form-label" data-i18n="receivablesLabel">সহজে আদায়যোগ্য পাওনা টাকা (Good Debts):</label>
+            <div class="input-group">
+              <span class="input-prefix">৳</span>
+              <input type="number" id="receivablesInput" min="0" step="any" class="form-control" placeholder="0" aria-describedby="receivablesInputError">
+            </div>
+            <div id="receivablesInputError" class="field-error-msg"></div>
+          </div>
+
+          <!-- Investments & Shares -->
+          <div class="form-group">
+            <label for="investmentsInput" class="form-label" data-i18n="investmentsLabel">শেয়ার, মিউচুয়াল ফান্ড ও ব্যবসায় বিনিয়োগ (যাকাতযোগ্য অংশ):</label>
+            <div class="input-group">
+              <span class="input-prefix">৳</span>
+              <input type="number" id="investmentsInput" min="0" step="any" class="form-control" placeholder="0" aria-describedby="investmentsInputError">
+            </div>
+            <div id="investmentsInputError" class="field-error-msg"></div>
+          </div>
+
+          <!-- Savings schemes, DPS -->
+          <div class="form-group">
+            <label for="savingsInput" class="form-label" data-i18n="savingsLabel">সঞ্চয়পত্র, ডিপিএস বা প্রভিডেন্ট ফান্ড (উত্তোলনযোগ্য অংশ):</label>
+            <div class="input-group">
+              <span class="input-prefix">৳</span>
+              <input type="number" id="savingsInput" min="0" step="any" class="form-control" placeholder="0" aria-describedby="savingsInputError">
+            </div>
+            <div id="savingsInputError" class="field-error-msg"></div>
+          </div>
+
+          <!-- Rental income saved -->
+          <div class="form-group" style="grid-column: 1 / -1;">
+            <label for="rentalInput" class="form-label" data-i18n="rentalLabel">বাড়ি বা দোকান ভাড়ার জমানো উদ্বৃত্ত ও অন্যান্য সম্পদ:</label>
+            <div class="input-group">
+              <span class="input-prefix">৳</span>
+              <input type="number" id="rentalInput" min="0" step="any" class="form-control" placeholder="0" aria-describedby="rentalInputError">
+            </div>
+            <div id="rentalInputError" class="field-error-msg"></div>
+          </div>
+        </div>
+
+        <!-- Custom Assets Dynamic Section -->
+        <div style="margin-top: 1.5rem;">
+          <label class="form-label" data-i18n="customAssetsTitle">অতিরিক্ত নিজস্ব সম্পদ (প্রয়োজনে যোগ করুন):</label>
+          <div id="customAssetsContainer" class="custom-rows-container"></div>
+          <button type="button" class="btn-add" id="btnAddCustomAsset" data-i18n="btnAddAsset">+ নতুন সম্পদ যোগ করুন</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         STEP 3: LIABILITIES CARD
+         ==================================================================== -->
+    <section id="step3Card" class="card" aria-labelledby="step3Heading">
+      <header class="card-header">
+        <div class="card-header-left">
+          <span class="card-step-badge" data-i18n="step3Badge">ধাপ ৩</span>
+          <div>
+            <h2 id="step3Heading" class="card-title" data-i18n="step3Title">বাদযোগ্য ঋণ ও দেনা (Liabilities)</h2>
+            <p class="card-subtitle" data-i18n="step3Subtitle">যেসব ঋণ ও পাওনা অবিলম্বে বা চলতি বছরে পরিশোধ করতে হবে</p>
+          </div>
+        </div>
+        <div class="subtotal-badge">
+          <span data-i18n="totalLiabilitiesLabel">মোট দেনা:</span>
+          <span id="totalLiabilitiesBadge">৳ ০</span>
+        </div>
+      </header>
+
+      <div class="card-body">
+        <div class="form-grid">
+          <!-- Debts immediate -->
+          <div class="form-group">
+            <label for="debtsImmediateInput" class="form-label" data-i18n="debtsImmediateLabel">তাৎক্ষণিক বকেয়া বিল ও নিকটবর্তী দেনা:</label>
+            <div class="input-group">
+              <span class="input-prefix">৳</span>
+              <input type="number" id="debtsImmediateInput" min="0" step="any" class="form-control" placeholder="0" aria-describedby="debtsImmediateInputError">
+            </div>
+            <div id="debtsImmediateInputError" class="field-error-msg"></div>
+          </div>
+
+          <!-- Loan installments -->
+          <div class="form-group">
+            <label for="debtsInstallmentsInput" class="form-label" data-i18n="debtsInstallmentsLabel">চলতি এক বছরের মধ্যে প্রদেয় ঋণের কিস্তি:</label>
+            <div class="input-group">
+              <span class="input-prefix">৳</span>
+              <input type="number" id="debtsInstallmentsInput" min="0" step="any" class="form-control" placeholder="0" aria-describedby="debtsInstallmentsInputError">
+            </div>
+            <div id="debtsInstallmentsInputError" class="field-error-msg"></div>
+          </div>
+
+          <!-- Business payables -->
+          <div class="form-group">
+            <label for="debtsBusinessInput" class="form-label" data-i18n="debtsBusinessLabel">ব্যবসায়িক প্রদেয় দেনা (পাওনাদারদের পাওনা):</label>
+            <div class="input-group">
+              <span class="input-prefix">৳</span>
+              <input type="number" id="debtsBusinessInput" min="0" step="any" class="form-control" placeholder="0" aria-describedby="debtsBusinessInputError">
+            </div>
+            <div id="debtsBusinessInputError" class="field-error-msg"></div>
+          </div>
+        </div>
+
+        <!-- Custom Liabilities Dynamic Section -->
+        <div style="margin-top: 1.5rem;">
+          <label class="form-label" data-i18n="customLiabilitiesTitle">অতিরিক্ত অন্যান্য ঋণ/দেনা:</label>
+          <div id="customLiabilitiesContainer" class="custom-rows-container"></div>
+          <button type="button" class="btn-add" id="btnAddCustomLiability" data-i18n="btnAddLiability">+ নতুন দেনা যোগ করুন</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         STEP 4: RESULT CARD
+         ==================================================================== -->
+    <section id="step4Card" class="card" aria-labelledby="step4Heading">
+      <header class="card-header">
+        <div class="card-header-left">
+          <span class="card-step-badge" data-i18n="step4Badge">ধাপ ৪</span>
+          <div>
+            <h2 id="step4Heading" class="card-title" data-i18n="step4Title">চূড়ান্ত যাকাত হিসাব ও বিবরণী</h2>
+            <p class="card-subtitle" data-i18n="step4Subtitle">আপনার যাকাতযোগ্য নীট সম্পদ এবং প্রযোজ্য যাকাতের পরিমাণ</p>
+          </div>
+        </div>
+      </header>
+
+      <div class="card-body">
+        <!-- Live Result Hero Box (with aria-live) -->
+        <div id="resultHero" class="result-hero not-due" aria-live="polite">
+          <div id="resultStatusPill" class="result-status-pill">
+            ℹ নিসাব পূরণ হয়নি, যাকাত আবশ্যক নয়
+          </div>
+          <div class="result-zakat-amount" id="resultZakatAmount">৳ ০</div>
+          <div class="result-zakat-rate" data-i18n="zakatRateText">যাকাতের হার: ২.৫% (১/৪০ অংশ)</div>
+        </div>
+
+        <!-- Summary Stats Grid -->
+        <div class="stat-summary-grid">
+          <div class="stat-box">
+            <div class="stat-label" data-i18n="netWealthLabel">নীট যাকাতযোগ্য সম্পদ</div>
+            <div class="stat-val" id="statNetWealth">৳ ০</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-label" data-i18n="nisabThresholdLabel">নিসাব সীমা (থ্রেশহোল্ড)</div>
+            <div class="stat-val" id="statNisab">৳ ৬১,২৩৬</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-label" data-i18n="zakatDueLabel">প্রদেয় যাকাত</div>
+            <div class="stat-val" style="color: var(--color-primary);" id="statZakatDue">৳ ০</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-label" data-i18n="remainingZakatLabel">বাকি প্রদেয় যাকাত</div>
+            <div class="stat-val" style="color: var(--color-accent);" id="statRemainingDue">৳ ০</div>
+          </div>
+        </div>
+
+        <!-- Optional: Zakat Paid So Far Field -->
+        <div class="paid-zakat-box">
+          <div class="form-group" style="max-width: 480px; margin: 0 auto;">
+            <label for="zakatPaidInput" class="form-label" data-i18n="paidZakatLabel">চলতি বছর ইতোমধ্যে প্রদত্ত যাকাত (ঐচ্ছিক):</label>
+            <div class="input-group">
+              <span class="input-prefix">৳</span>
+              <input type="number" id="zakatPaidInput" min="0" step="any" class="form-control" placeholder="0" aria-describedby="zakatPaidInputError">
+            </div>
+            <div id="zakatPaidInputError" class="field-error-msg"></div>
+          </div>
+        </div>
+
+        <!-- Hawl Lunar Year Gentle Reminder -->
+        <div class="hawl-card">
+          <span class="hawl-icon">🌙</span>
+          <span data-i18n="hawlReminder">স্মরণিকা: যাকাত ফরজ হওয়ার জন্য সম্পদ নিসাব পরিমাণ বা তার বেশিতে পৌঁছানোর পর এক পূর্ণ চান্দ্র বছর (হাওল / ৩৫৪ দিন) অতিবাহিত হতে হবে।</span>
+        </div>
+
+        <!-- Step-by-Step Calculation Explanation Box -->
+        <div class="calc-explanation">
+          <div class="calc-explanation-title">
+            <span>📐</span>
+            <span data-i18n="calcExplanationTitle">হিসাবের পর্যায়ক্রমিক ব্যাখ্যা:</span>
+          </div>
+          <div class="calc-step-list" id="calcStepList"></div>
+        </div>
+
+        <!-- Itemized Breakdown Table -->
+        <div class="breakdown-table-wrapper">
+          <table class="breakdown-table">
+            <thead>
+              <tr>
+                <th data-i18n="breakdownCategory">খাত / উৎস</th>
+                <th data-i18n="breakdownAmount">টাকার পরিমাণ</th>
+                <th data-i18n="breakdownShare">শতকরা অনুপাত</th>
+              </tr>
+            </thead>
+            <tbody id="breakdownTableBody"></tbody>
+          </table>
+        </div>
+
+        <!-- Action Toolbar -->
+        <div class="action-toolbar">
+          <button type="button" class="btn-primary" id="btnCopyResult">
+            <span>📋</span>
+            <span data-i18n="btnCopy">হিসাব কপি করুন</span>
+          </button>
+          <button type="button" class="btn-secondary" id="btnPrintResult">
+            <span>🖨️</span>
+            <span data-i18n="btnPrint">প্রিন্ট / পিডিএফ সংরক্ষণ</span>
+          </button>
+          <button type="button" class="btn-danger-outline" id="btnResetAll">
+            <span>🔄</span>
+            <span data-i18n="btnReset">সব মুছুন (Reset)</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         CONTENT SECTIONS: EDUCATIONAL & GUIDES
+         ==================================================================== -->
+    <section class="edu-section" aria-labelledby="eduSectionTitle">
+      <div class="section-header">
+        <h2 id="eduSectionTitle" class="section-title" data-i18n="eduTitle">যাকাত বিষয়ক প্রয়োজনীয় নির্দেশিকা</h2>
+        <p class="section-subtitle" data-i18n="eduSubtitle">পবিত্র কুরআন ও সুন্নাহর আলোকে যাকাতের বিধান ও নিয়মাবলী</p>
+      </div>
+
+      <div class="edu-grid">
+        <!-- What is Zakat -->
+        <article class="edu-card">
+          <div class="edu-card-icon">📖</div>
+          <h3 class="edu-card-title" data-i18n="whatIsZakatTitle">যাকাত কী?</h3>
+          <p class="edu-card-text" data-i18n="whatIsZakatText">
+            যাকাত ইসলামের অন্যতম মূল স্তম্ভ। নিসাব পরিমাণ সম্পদের অধিকারী প্রত্যেক প্রাপ্তবয়স্ক, সুস্থ মস্তিষ্কের মুসলিমের জন্য প্রতি চান্দ্র বছরান্তে উদ্বৃত্ত সম্পদের ২.৫% (১/৪০ অংশ) নির্ধারিত আটটি খাতে প্রদান করা আল্লাহর পক্ষ থেকে নির্ধারিত বাধ্যতামূলক আর্থিক ইবাদত।
+          </p>
+        </article>
+
+        <!-- Who Must Pay -->
+        <article class="edu-card">
+          <div class="edu-card-icon">👤</div>
+          <h3 class="edu-card-title" data-i18n="whoMustPayTitle">কার উপর যাকাত ফরজ?</h3>
+          <p class="edu-card-text" data-i18n="whoMustPayText">
+            ১) মুসলিম হওয়া, ২) প্রাপ্তবয়স্ক ও সুস্থ মস্তিষ্কের অধিকারী হওয়া, ৩) স্বাধীন ব্যক্তি হওয়া, ৪) সম্পদের পূর্ণাঙ্গ মালিকানা থাকা, ৫) সম্পদ নিসাব পরিমাণ বা তার অধিক হওয়া, এবং ৬) নিসাব পরিমাণ সম্পদ এক চান্দ্র বছর (হাওল) পূর্ণ থাকা।
+          </p>
+        </article>
+
+        <!-- How Nisab Works -->
+        <article class="edu-card">
+          <div class="edu-card-icon">⚖️</div>
+          <h3 class="edu-card-title" data-i18n="howNisabWorksTitle">নিসাব কীভাবে নির্ধারিত হয়?</h3>
+          <p class="edu-card-text" data-i18n="howNisabWorksText">
+            নিসাব হলো যাকাত ফরজ হওয়ার ন্যূনতম সম্পদের পরিমাণ। হাদিস শরীফ অনুযায়ী স্বর্ণের নিসাব সাড়ে সাত তোলা (৮৭.৪৮ গ্রাম) এবং রূপার নিসাব সাড়ে বায়ান্ন তোলা (৬১২.৩৬ গ্রাম)। নগদ টাকা, ব্যবসা পণ্য বা মিশ্র সম্পদ থাকলে সতর্কতামূলকভাবে রূপার নিসাব মূল্যকে ভিত্তি ধরা হয়।
+          </p>
+        </article>
+      </div>
+
+      <!-- 8 Categories of Recipients -->
+      <div style="margin-top: 3rem;">
+        <div class="section-header">
+          <h3 class="section-title" style="font-size: 1.45rem;" data-i18n="recipientsTitle">যাকাতের ৮টি খাত (সূরা আত-তাওবাহ: ৬০)</h3>
+          <p class="section-subtitle" data-i18n="recipientsSubtitle">পবিত্র কুরআনে আল্লাহ তাআলা যাকাতের অর্থ ব্যয়ের সুনির্দিষ্ট ৮টি খাত নির্ধারণ করে দিয়েছেন:</p>
+        </div>
+
+        <div class="recipients-grid">
+          <div class="recipient-card">
+            <span class="recipient-num">১</span>
+            <h4 class="recipient-name" data-i18n="cat1Title">১. ফকীর (দরিদ্র)</h4>
+            <p class="recipient-desc" data-i18n="cat1Desc">যার কিছু সম্পদ আছে কিন্তু তা দৈনন্দিন জীবন নির্বাহের প্রয়োজনের তুলনায় অপ্রতুল।</p>
+          </div>
+          <div class="recipient-card">
+            <span class="recipient-num">২</span>
+            <h4 class="recipient-name" data-i18n="cat2Title">২. মিসকীন (অভাবী)</h4>
+            <p class="recipient-desc" data-i18n="cat2Desc">যার কোনো সম্পদ নেই এবং কারো কাছে হাত পাততেও পারে না।</p>
+          </div>
+          <div class="recipient-card">
+            <span class="recipient-num">৩</span>
+            <h4 class="recipient-name" data-i18n="cat3Title">৩. আমেলীন (কর্মকর্তা)</h4>
+            <p class="recipient-desc" data-i18n="cat3Desc">যাকাত আদায়, হিসাব সংরক্ষণ ও বিতরণের কাজে রাষ্ট্রীয় বা প্রাতিষ্ঠানিকভাবে নিয়োজিত ব্যক্তি।</p>
+          </div>
+          <div class="recipient-card">
+            <span class="recipient-num">৪</span>
+            <h4 class="recipient-name" data-i18n="cat4Title">৪. মুআল্লাফাতুল কুলুব</h4>
+            <p class="recipient-desc" data-i18n="cat4Desc">ইসলামের প্রতি আকৃষ্ট করার জন্য বা ইসলামের সুরক্ষায় চিত্তাকর্ষক নবমুসলিমগণ।</p>
+          </div>
+          <div class="recipient-card">
+            <span class="recipient-num">৫</span>
+            <h4 class="recipient-name" data-i18n="cat5Title">৫. দাসমুক্তি (রিকাব)</h4>
+            <p class="recipient-desc" data-i18n="cat5Desc">বন্দিদশা বা দাসত্ব থেকে মুক্তির উদ্দেশ্যে অর্থ প্রদান (বর্তমান যুগে বৈধ বন্দি মুক্তি)।</p>
+          </div>
+          <div class="recipient-card">
+            <span class="recipient-num">৬</span>
+            <h4 class="recipient-name" data-i18n="cat6Title">৬. গারেমীন (ঋণগ্রস্ত)</h4>
+            <p class="recipient-desc" data-i18n="cat6Desc">যে ব্যক্তি বৈধ প্রয়োজনে ঋণগ্রস্ত এবং ঋণ পরিশোধে সম্পূর্ণ অক্ষম।</p>
+          </div>
+          <div class="recipient-card">
+            <span class="recipient-num">৭</span>
+            <h4 class="recipient-name" data-i18n="cat7Title">৭. ফী সাবিলিল্লাহ</h4>
+            <p class="recipient-desc" data-i18n="cat7Desc">আল্লাহর পথে জিহাদ বা ইসলামের প্রচার ও সুরক্ষায় নিয়োজিত নিঃস্ব ব্যক্তিবর্গ।</p>
+          </div>
+          <div class="recipient-card">
+            <span class="recipient-num">৮</span>
+            <h4 class="recipient-name" data-i18n="cat8Title">৮. ইবনে সাবীল (মুসাফির)</h4>
+            <p class="recipient-desc" data-i18n="cat8Desc">সফরে থাকা অবস্থায় বিপদে পড়ে নিঃস্ব হয়ে পড়া মুসাফির, নিজ দেশে ধনী হলেও।</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ Accordion -->
+      <div style="margin-top: 3.5rem;">
+        <div class="section-header">
+          <h3 class="section-title" style="font-size: 1.45rem;" data-i18n="faqTitle">সচরাচর জিজ্ঞাসিত প্রশ্নাবলী (FAQ)</h3>
+        </div>
+
+        <div class="faq-accordion">
+          <!-- FAQ 1 -->
+          <div class="faq-item">
+            <button type="button" class="faq-question">
+              <span data-i18n="faq1Q">স্বর্ণ ও রৌপ্য নিসাবের মধ্যে কোনটি নির্বাচন করব?</span>
+              <span class="faq-icon" aria-hidden="true">▼</span>
+            </button>
+            <div class="faq-answer">
+              <p data-i18n="faq1A">
+                আপনার কাছে যদি শুধুমাত্র খাঁটি স্বর্ণ থাকে এবং কোনো নগদ টাকা বা ব্যবসায়িক পণ্য না থাকে, তবে স্বর্ণের নিসাব ধরা যায়। কিন্তু যদি নগদ টাকা, স্বর্ণ, রূপা বা ব্যবসায়িক পণ্য মিলিয়ে মিশ্র সম্পদ থাকে, তবে হানাফী ফিকহ সহ সংখ্যাগরিষ্ঠ আলেমদের মতে রূপার নিসাবকে ভিত্তি ধরা উত্তম, কারণ এতে গরীবের হক সর্বাধিক সংরক্ষিত হয়।
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="faq-item">
+            <button type="button" class="faq-question">
+              <span data-i18n="faq2Q">ব্যবহৃত স্বর্ণালংকারের উপর কি যাকাত দিতে হবে?</span>
+              <span class="faq-icon" aria-hidden="true">▼</span>
+            </button>
+            <div class="faq-answer">
+              <p data-i18n="faq2A">
+                হানাফী মাযহাব অনুযায়ী মহিলাদের ব্যবহৃত স্বর্ণ ও রৌপ্যের অলংকার নিসাব পরিমাণ হলে এবং এক বছর পূর্ণ হলে তার উপরও যাকাত দেওয়া আবশ্যক। অন্যান্য কিছু মাযহাবে ব্যবহৃত অলংকারকে নিত্যপ্রয়োজনীয় বিবেচনা করে যাকাত থেকে অব্যাহতি দেওয়া হয়েছে। তবে অধিক সতর্কতা হলো যাকাত প্রদান করা।
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="faq-item">
+            <button type="button" class="faq-question">
+              <span data-i18n="faq3Q">দীর্ঘমেয়াদী ঋণের কিস্তি কীভাবে হিসাব করব?</span>
+              <span class="faq-icon" aria-hidden="true">▼</span>
+            </button>
+            <div class="faq-answer">
+              <p data-i18n="faq3A">
+                বাড়ি নির্মাণ বা দীর্ঘমেয়াদী ঋণের ক্ষেত্রে পুরো ঋণ একসাথে বিয়োগ করা যাবে না। শুধুমাত্র চলতি এক বছরের মধ্যে যেসব কিস্তি প্রদেয় হবে, সেই পরিমাণ অংশ যাকাত হিসাবের সময় মোট সম্পদ থেকে বাদ দেওয়া যাবে।
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 4 -->
+          <div class="faq-item">
+            <button type="button" class="faq-question">
+              <span data-i18n="faq4Q">বাড়ি কেনা বা বিয়ের জন্য জমানো টাকার যাকাত দিতে হবে?</span>
+              <span class="faq-icon" aria-hidden="true">▼</span>
+            </button>
+            <div class="faq-answer">
+              <p data-i18n="faq4A">
+                হ্যাঁ। টাকা ভবিষ্যতে যে মহৎ কাজের জন্যই জমানো হোক না কেন, তা যদি নিসাব পরিমাণ থাকে এবং এক চান্দ্র বছর পার হয়, তবে তার উপর ২.৫% যাকাত দেওয়া ফরজ। অর্থ খরচ না করা পর্যন্ত তা যাকাতযোগ্য সম্পদ হিসেবে গণ্য হবে।
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 5 -->
+          <div class="faq-item">
+            <button type="button" class="faq-question">
+              <span data-i18n="faq5Q">যাকাত কখন এবং কীভাবে প্রদান করতে হয়?</span>
+              <span class="faq-icon" aria-hidden="true">▼</span>
+            </button>
+            <div class="faq-answer">
+              <p data-i18n="faq5A">
+                সম্পদ নিসাবে পৌঁছার পর প্রতি চান্দ্র বছর পূর্ণ হওয়ার তারিখে যাকাত হিসাব করে তাৎক্ষণিকভাবে হকদারদের মাঝে বিতরণ করা উচিত। কোনো বিলম্ব করা অনুচিত। নগদ টাকা বা খাদ্যসামগ্রী বা পুনর্বাসনের মাধ্যমে যাকাত দেওয়া যায়।
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Disclaimer Box -->
+      <aside class="disclaimer-card" role="note">
+        <p data-i18n="disclaimerText">
+          সতর্কীকরণ ও ধর্মীয় দায়মুক্তি: এই ক্যালকুলেটরটি কেবল একটি হিসাব সহায়ক প্রযুক্তিগত টুল। এটি কোনো প্রাতিষ্ঠানিক ধর্মীয় ফতোয়া বা রুলিং নয়। জটিল অর্থনৈতিক সম্পদ, কোম্পানির শেয়ারের অভ্যন্তরীণ মূল্য ও পারিবারিক সুনির্দিষ্ট মাসয়ালার জন্য সর্বদা কোনো প্রাজ্ঞ ও বিশ্বস্ত ইসলামী ফকীহের পরামর্শ নিন।
+        </p>
+      </aside>
+    </section>
+
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <strong>যাকাত ক্যালকুলেটর (Zakat Calculator BD)</strong>
+        <p style="margin-top: 0.35rem;">১০০% ক্লায়েন্ট সাইড প্রযুক্তি | কোনো সার্ভার বা ট্র্যাকিং নেই | ব্যক্তিগত ও গোপনীয়</p>
+      </div>
+      <ul class="footer-links">
+        <li><a href="#step1Card">নিসাব সেটিংস</a></li>
+        <li><a href="#step2Card">সম্পদ হিসাব</a></li>
+        <li><a href="#step3Card">দায় ও ঋণ</a></li>
+        <li><a href="#step4Card">ফলাফল ও প্রিন্ট</a></li>
+      </ul>
+      <p style="font-size: 0.8rem; color: var(--text-muted);">
+        © 2026 Zakat Calculator. Designed for the Muslim Ummah with care and precision.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Reset Confirmation Modal -->
+  <div class="modal-overlay" id="resetModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-card">
+      <h3 class="modal-title" id="modalTitle" data-i18n="confirmResetTitle">আপনি কি নিশ্চিত?</h3>
+      <p class="modal-body" data-i18n="confirmResetBody">সব ফিল্ডের মান প্রাথমিক অবস্থায় ফিরে যাবে এবং আপনার ইনপুট মুছে যাবে।</p>
+      <div class="modal-actions">
+        <button type="button" class="btn-secondary" id="btnConfirmResetCancel" data-i18n="confirmCancel">বাতিল</button>
+        <button type="button" class="btn-primary" style="background: var(--color-danger-border); border-color: var(--color-danger-border); color: #991b1b;" id="btnConfirmResetYes" data-i18n="confirmYes">হ্যাঁ, মুছুন</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toastContainer" aria-live="assertive" aria-atomic="true"></div>
+
+  <!-- JavaScript -->
+  <script src="js/zakat.js"></script>
+</body>
+</html>
